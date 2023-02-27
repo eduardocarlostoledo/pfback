@@ -12,7 +12,7 @@ cartRouter.get('/', async (req,res) => {
         const productsCart = await getProductsCart()
         res.status(200).json(productsCart)
     } catch (error) {
-        res.status(400).json("No hay productos en el carrito")
+        res.send("No hay productos en el carrito")
     }
 })
 
